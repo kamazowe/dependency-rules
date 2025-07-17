@@ -1,4 +1,3 @@
-// disable-next-line no-console
-import { ab } from './ab';
+import { shellHost } from './host/shell/shellHost';
 
-console.log('hello ' +ab)
+console.log(shellHost)

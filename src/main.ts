@@ -1,2 +1,4 @@
 // disable-next-line no-console
-console.log('hello')
+import { ab } from './ab';
+
+console.log('hello ' +ab)

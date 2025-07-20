@@ -24,7 +24,9 @@
     "src/host/shell",
     "src/auth/legacy/legacy-export-to-feature",
     "src/auth/legacy/legacy-import-legacy",
-    "src/auth/legacy/legacy-import-ui"
+    "src/auth/legacy/legacy-import-ui",
+    "src/auth/api",
+    "src/cards/api"
   ],
   "groups": [
     "src/auth/features",

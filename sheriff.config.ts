@@ -7,7 +7,7 @@ export const config: SheriffConfig = {
         'src': {
             'host': ['domain:host'],
             'cards': {
-                'api':['domain:cards','type:api'],
+                'api':['domain:cards-api','type:api'],
                 'data-access':['domain:cards','type:data-access'],
                 'domain':['domain:cards','type:domain'],
                 'features': {
@@ -21,7 +21,6 @@ export const config: SheriffConfig = {
                 'utils':['domain:cards','type:utils'],
             },
             'dashboard': {
-                'api':['domain:dashboard','type:api'],
                 'data-access':['domain:dashboard','type:data-access'],
                 'domain':['domain:dashboard','type:domain'],
                 'features': {
@@ -35,7 +34,7 @@ export const config: SheriffConfig = {
                 'utils':['domain:dashboard','type:utils'],
             },
             'auth': {
-                'api':['domain:auth','type:api'],
+                'api':['domain:auth-api','type:api'],
                 'data-access':['domain:auth','type:data-access'],
                 'domain':['domain:auth','type:domain'],
                 'features': {
@@ -58,8 +57,8 @@ export const config: SheriffConfig = {
         'type:domain': ['type:utils'],
         'type:data-access': ['type:domain','type:utils'],
         'type:ui': ['type:utils'],
-        'type:feature': ['type:ui','type:utils','type:domain','type:data-access','type:legacy'],
-        'type:api': ['type:api','type:ui','type:utils','type:domain','type:data-access','type:feature'],
+        'type:feature': ['type:ui','type:utils','type:domain','type:data-access','type:legacy','type:api'],
+        'type:api': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
         'type:shell': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
         'domain:host': [
             'domain:cards',
@@ -68,11 +67,20 @@ export const config: SheriffConfig = {
         ],
         'domain:cards': [
             'domain:cards',
+            'domain:auth-api'
+        ],
+        'domain:cards-api': [
+            'domain:cards',
         ],
         'domain:dashboard': [
             'domain:dashboard',
+            'domain:cards-api',
+            'domain:auth-api'
         ],
         'domain:auth': [
+            'domain:auth',
+        ],
+        'domain:auth-api': [
             'domain:auth',
         ],
     },

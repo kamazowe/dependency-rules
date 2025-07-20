@@ -14,6 +14,14 @@ export const config: SheriffConfig = {
     depRules: {
         root: ['noTag', 'domain:host'],
         noTag: ['noTag'],
+        'type:utils': [],
+        'type:domain': ['type:utils'],
+        'type:data-access': ['type:domain','type:utils'],
+        'type:ui': ['type:utils'],
+        'type:feature': ['type:ui','type:utils','type:domain','type:data-access'],
+        'type:api': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
+        'type:shell': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
+        'type:legacy': [],
         'domain:host': [
             'domain:cards',
             'domain:dashboard',

@@ -1,8 +1,5 @@
 {
   "scopes": [
-    "src/cards",
-    "src/dashboard",
-    "src/host",
     "src/auth/data-access",
     "src/auth/domain",
     "src/auth/shell",
@@ -10,11 +7,32 @@
     "src/auth/utils",
     "src/auth/features/feature-a",
     "src/auth/features/feature-b",
-    "src/auth/legacy"
+    "src/cards/data-access",
+    "src/cards/domain",
+    "src/cards/features",
+    "src/cards/legacy",
+    "src/cards/shell",
+    "src/cards/ui",
+    "src/cards/utils",
+    "src/dashboard/data-access",
+    "src/dashboard/domain",
+    "src/dashboard/features",
+    "src/dashboard/legacy",
+    "src/dashboard/shell",
+    "src/dashboard/ui",
+    "src/dashboard/utils",
+    "src/host/shell",
+    "src/auth/legacy/legacy-export-to-feature",
+    "src/auth/legacy/legacy-import-legacy",
+    "src/auth/legacy/legacy-import-ui"
   ],
   "groups": [
     "src/auth/features",
+    "src/auth/legacy",
     "src/auth",
+    "src/cards",
+    "src/dashboard",
+    "src/host",
     "src"
   ],
   "entries": [

@@ -6,8 +6,34 @@ export const config: SheriffConfig = {
     modules: {
         'src': {
             'host': ['domain:host'],
-            'cards': ['domain:cards'],
-            'dashboard': ['domain:dashboard'],
+            'cards': {
+                'api':['domain:cards','type:api'],
+                'data-access':['domain:cards','type:data-access'],
+                'domain':['domain:cards','type:domain'],
+                'features': {
+                    '<feature-name>': ['domain:cards','type:feature'],
+                },
+                'legacy':['domain:cards','type:legacy'],
+                'shell':['domain:cards','type:shell'],
+                'ui': {
+                    '<ui-name>': ['domain:cards','type:ui'],
+                },
+                'utils':['domain:cards','type:utils'],
+            },
+            'dashboard': {
+                'api':['domain:dashboard','type:api'],
+                'data-access':['domain:dashboard','type:data-access'],
+                'domain':['domain:dashboard','type:domain'],
+                'features': {
+                    '<feature-name>': ['domain:dashboard','type:feature'],
+                },
+                'legacy':['domain:dashboard','type:legacy'],
+                'shell':['domain:dashboard','type:shell'],
+                'ui': {
+                    '<ui-name>': ['domain:dashboard','type:ui'],
+                },
+                'utils':['domain:dashboard','type:utils'],
+            },
             'auth': {
                 'api':['domain:auth','type:api'],
                 'data-access':['domain:auth','type:data-access'],

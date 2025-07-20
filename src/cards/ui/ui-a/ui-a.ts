@@ -1,1 +1,3 @@
-export const uiA = '[cards] uiA'
+import { cardsUtilX } from '../../utils/util-x/util-x';
+
+export const cardsUiA = '[cards] uiA' + cardsUtilX

@@ -1,1 +1,1 @@
-export const utilX = '[dashboard] utilX'
+export const dashboardUtilX = '[dashboard] utilX'

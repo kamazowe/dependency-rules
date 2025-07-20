@@ -1,1 +1,1 @@
-export const utilX = '[cards] utilX'
+export const cardsUtilX = '[cards] utilX'

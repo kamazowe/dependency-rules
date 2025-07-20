@@ -2,26 +2,39 @@ import { SheriffConfig } from '@softarc/sheriff-core';
 
 
 export const config: SheriffConfig = {
+    autoTagging: true,
     modules: {
         'src': {
             'host': ['domain:host'],
             'cards': ['domain:cards'],
-            'auth': ['domain:auth'],
             'dashboard': ['domain:dashboard'],
-        },
+            'auth': {
+                'api':['domain:auth','type:api'],
+                'data-access':['domain:auth','type:data-access'],
+                'domain':['domain:auth','type:domain'],
+                'features': {
+                    '<feature-name>': ['domain:auth','type:feature'],
+                },
+                'legacy':['domain:auth','type:legacy'],
+                'shell':['domain:auth','type:shell'],
+                'ui': {
+                    '<ui-name>': ['domain:auth','type:ui'],
+                },
+                'utils':['domain:auth','type:utils'],
+            },
+        }
     },
     enableBarrelLess: true,
     depRules: {
-        root: ['noTag', 'domain:host'],
-        noTag: ['noTag'],
+        'root': ['domain:host','type:shell'],
+        'type:legacy': ['*'],
         'type:utils': [],
         'type:domain': ['type:utils'],
         'type:data-access': ['type:domain','type:utils'],
         'type:ui': ['type:utils'],
-        'type:feature': ['type:ui','type:utils','type:domain','type:data-access'],
-        'type:api': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
+        'type:feature': ['type:ui','type:utils','type:domain','type:data-access','type:legacy'],
+        'type:api': ['type:api','type:ui','type:utils','type:domain','type:data-access','type:feature'],
         'type:shell': ['type:ui','type:utils','type:domain','type:data-access','type:feature'],
-        'type:legacy': [],
         'domain:host': [
             'domain:cards',
             'domain:dashboard',

@@ -1,7 +1,21 @@
 {
   "scopes": [
+    "src/cards",
+    "src/dashboard",
+    "src/host",
+    "src/auth/data-access",
+    "src/auth/domain",
+    "src/auth/shell",
+    "src/auth/ui",
+    "src/auth/utils",
+    "src/auth/features/feature-a",
+    "src/auth/features/feature-b",
+    "src/auth/legacy"
   ],
   "groups": [
+    "src/auth/features",
+    "src/auth",
+    "src"
   ],
   "entries": [
     "src/main.ts"

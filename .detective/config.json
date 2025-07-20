@@ -1,0 +1,18 @@
+{
+  "scopes": [
+  ],
+  "groups": [
+  ],
+  "entries": [
+    "src/main.ts"
+  ],
+  "filter": {
+    "files": [
+      "**/*.ts",
+      "!**/*.spec.ts"
+    ],
+    "logs": []
+  },
+  "aliases": {},
+  "teams": {}
+}

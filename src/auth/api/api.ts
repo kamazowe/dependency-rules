@@ -1,3 +1,3 @@
 import { apiInternalAuth } from './api-internal';
 
-export const apiAuth = '[auth] apiAuth' + apiInternalAuth;
+export const authApi = '[auth] apiAuth' + apiInternalAuth;

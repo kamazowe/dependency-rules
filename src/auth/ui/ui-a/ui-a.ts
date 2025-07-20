@@ -1,3 +1,3 @@
-import { utilX } from '../../utils/util-x/util-x';
+import { authUtilX } from '../../utils/util-x/util-x';
 
-export const uiA = '[auth] uiA' + utilX
+export const authUiA = '[auth] uiA' + authUtilX

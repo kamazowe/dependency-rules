@@ -1,3 +1,3 @@
-import { utilY } from '../utils/util-y/util-y';
+import { authUtilY } from '../utils/util-y/util-y';
 
-export const domain = '[auth] domain' + utilY
+export const authDomain = '[auth] domain' + authUtilY

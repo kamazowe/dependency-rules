@@ -1,3 +1,3 @@
-import { uiA } from '../../ui/ui-a/ui-a';
+import { authUiA } from '../../ui/ui-a/ui-a';
 
-export const authLegacyImportUI = '[auth legacy] import ui' + uiA
+export const authLegacyImportUI = '[auth legacy] import ui' + authUiA

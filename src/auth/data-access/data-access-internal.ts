@@ -1,3 +1,3 @@
-import { domain } from '../domain/domain';
+import { authDomain } from '../domain/domain';
 
-export const dataAccessInternal= '[auth] data-access internal' + domain;
+export const dataAccessInternal= '[auth] data-access internal' + authDomain;

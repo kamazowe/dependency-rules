@@ -1,1 +1,1 @@
-export const utilX = '[auth] utilX'
+export const authUtilX = '[auth] utilX'
